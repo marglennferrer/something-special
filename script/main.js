@@ -255,6 +255,19 @@ const animationTimeline = () => {
         y: 30,
         zIndex: "-1",
     })
+// Add this in the animation timeline where you want to show the video
+// Show the iframe after the image
+.to("#birthday-video", 0.5, {
+    display: "block",
+    opacity: 1,
+    onComplete: function () {
+        // Update the iframe src to include the autoplay parameter
+        var iframe = document.getElementById("birthday-video");
+        var src = iframe.src;
+        iframe.src = src + "&autoplay=1";
+    }
+}, "+=0.5")
+// End the iframe after the image
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
         ".last-smile",
