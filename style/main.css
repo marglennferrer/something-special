@@ -101,6 +101,14 @@ body {
   z-index: 1;
 }
 
+.six .profile-video {
+    width: 450px;
+    height: 450px;
+    object-fit: cover; /* Ensures the video fits the box without distortion */
+    display: block;
+    margin: 0 auto; /* Centers the video horizontally */
+}
+
 .six img {
   display: inline-block;
   height: 350px;
